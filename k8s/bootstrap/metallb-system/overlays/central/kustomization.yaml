@@ -4,3 +4,5 @@ namespace: metallb-system
 
 resources:
   - ../../base
+  - advertisement.yaml
+  - ipAddressPool.yaml
