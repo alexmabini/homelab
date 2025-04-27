@@ -3,6 +3,14 @@ kind: Kustomization
 namespace: metallb-system
 
 resources:
-  - github.com/metallb/metallb/config/native?ref=v0.14.9
-  - advertisement.yaml
-  - ipAddressPool.yaml
+  - namespace.yaml
+
+helmCharts:
+  - name: metallb
+    repo: https://metallb.github.io/metallb
+    releaseName: metallb
+    namespace: metallb-system
+    valuesInline:
+      speaker:
+        frr:
+          enabled: false
