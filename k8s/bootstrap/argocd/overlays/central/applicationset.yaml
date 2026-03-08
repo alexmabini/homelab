@@ -7,21 +7,21 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/alexmabini/homelab.git
-        revision: HEAD
+        revision: main
         directories:
-          - path: k8s/bootstrap/**/overlay/central-test/*
+          - path: k8s/bootstrap/**/overlays/central
   template:
     metadata:
-      name: "{{path.basename}}"
+      name: "{{path[2]}}"
     spec:
       project: bootstrap
       source:
         repoURL: https://github.com/alexmabini/homelab.git
-        targetRevision: HEAD
+        targetRevision: main
         path: "{{path}}"
       destination:
         server: https://kubernetes.default.svc
-        namespace: "{{path.basename}}"
+        namespace: "{{path[2]}}"
       syncPolicy:
         automated:
           prune: true
