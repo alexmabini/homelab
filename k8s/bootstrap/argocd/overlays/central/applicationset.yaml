@@ -14,7 +14,7 @@ spec:
     metadata:
       name: "{{path.basename}}"
     spec:
-      project: default
+      project: bootstrap
       source:
         repoURL: https://github.com/alexmabini/homelab.git
         targetRevision: HEAD
