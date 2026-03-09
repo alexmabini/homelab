@@ -1,0 +1,6 @@
+global:
+  domain: argocd.k8s.mabini
+
+configs:
+  cm:
+    kustomize.buildOptions: --load_restrictor none
