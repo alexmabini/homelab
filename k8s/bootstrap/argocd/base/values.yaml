@@ -3,4 +3,4 @@ global:
 
 configs:
   cm:
-    kustomize.buildOptions: --load-restrictor LoadRestrictionsNone
+    kustomize.buildOptions: --load-restrictor LoadRestrictionsNone --enable-helm
