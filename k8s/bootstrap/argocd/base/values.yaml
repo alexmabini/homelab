@@ -3,4 +3,4 @@ global:
 
 configs:
   cm:
-    kustomize.buildOptions: --load_restrictor none
+    kustomize.buildOptions: --load-restrictor none
