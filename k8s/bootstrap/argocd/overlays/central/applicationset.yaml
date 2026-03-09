@@ -7,7 +7,7 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/alexmabini/homelab.git
-        revision: main
+        revision: HEAD
         directories:
           - path: k8s/bootstrap/**/overlays/central
   template:
@@ -17,7 +17,7 @@ spec:
       project: bootstrap
       source:
         repoURL: https://github.com/alexmabini/homelab.git
-        targetRevision: main
+        targetRevision: HEAD
         path: "{{path}}"
       destination:
         server: https://kubernetes.default.svc
